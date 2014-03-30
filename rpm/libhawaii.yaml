@@ -49,13 +49,13 @@ SubPackages:
           - libhawaiishell = %{version}-%{release}
       Description: This package provides the Hawaii.Shell.Core plugin.
       Files:
-         - "%{_libdir}/qml/Hawaii/Shell/Core/"
+         - "%{_libdir}/hawaii/qml/Hawaii/Shell/Core/"
     - Name: import-applications
       Summary: Hawaii.Shell.Applications plugin for QML
       Group: Development/System
       Description: This package provides the Hawaii.Shell.Applications plugin.
       Files:
-         - "%{_libdir}/qml/Hawaii/Shell/Applications/"
+         - "%{_libdir}/hawaii/qml/Hawaii/Shell/Applications/"
     - Name: -n libhawaiishell
       Summary: Hawaii Shell library
       Group: System/Libraries

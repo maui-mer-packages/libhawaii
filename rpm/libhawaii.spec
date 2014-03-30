@@ -132,13 +132,13 @@ rm -rf %{buildroot}
 
 %files import-core
 %defattr(-,root,root,-)
-%{_libdir}/qml/Hawaii/Shell/Core/
+%{_libdir}/hawaii/qml/Hawaii/Shell/Core/
 # >> files import-core
 # << files import-core
 
 %files import-applications
 %defattr(-,root,root,-)
-%{_libdir}/qml/Hawaii/Shell/Applications/
+%{_libdir}/hawaii/qml/Hawaii/Shell/Applications/
 # >> files import-applications
 # << files import-applications
 
