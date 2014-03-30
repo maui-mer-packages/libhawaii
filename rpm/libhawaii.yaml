@@ -1,0 +1,76 @@
+Name       : libhawaii
+Version    : 0.2.90
+Release    : 1
+Group      : System/Libraries
+License    : LGPLv2.1+
+Summary    : Libraries for the Hawaii desktop environment
+Description: Provides libraries for the Hawaii desktop environment.
+URL        : https://github.com/mauios/libhawaii.git
+Sources    : 
+    - libhawaii-%{version}.tar.xz
+SetupOptions: -q -n %{name}-%{version}/upstream
+
+Configure  : cmake 
+ConfigOptions: 
+    - -DCMAKE_BUILD_TYPE=RelWithDebInfo 
+
+PkgConfigBR:
+    - Qt5Core
+    - Qt5Gui
+    - Qt5Qml
+    - Qt5Quick
+
+PkgBR:
+    - cmake
+    - qt5-default
+    - qtconfiguration-devel
+
+Files:
+    - "%doc AUTHORS COPYING COPYING.LIB README.md"
+    - "%{_libdir}/libhawaii.so.*"
+
+SubPackages:
+    - Name: devel
+      Summary: Development files for Hawaii
+      Group: Development/System
+      Description: |
+        This package contains the files necessary to develop plugins |
+        for Hawaii.
+      Files:
+         - "%{_includedir}/hawaii/Hawaii/"
+         - "%{_includedir}/hawaii/hawaii/"
+         - "%{_libdir}/cmake/Hawaii/*.cmake"
+         - "%{_libdir}/libhawaii.so"
+    - Name: import-core
+      Summary: Hawaii.Shell.Core plugin for QML
+      Group: Development/System
+      Requires:
+          - libhawaiishell = %{version}-%{release}
+      Description: This package provides the Hawaii.Shell.Core plugin.
+      Files:
+         - "%{_libdir}/qml/Hawaii/Shell/Core/"
+    - Name: import-applications
+      Summary: Hawaii.Shell.Applications plugin for QML
+      Group: Development/System
+      Description: This package provides the Hawaii.Shell.Applications plugin.
+      Files:
+         - "%{_libdir}/qml/Hawaii/Shell/Applications/"
+    - Name: -n libhawaiishell
+      Summary: Hawaii Shell library
+      Group: System/Libraries
+      Description: Library for Hawaii Shell and its applications.
+      Files:
+         - "%{_libdir}/libhawaiishell.so.*"
+    - Name: -n libhawaiishell-devel
+      Summary: Development files for Hawaii Shell
+      Group: Development/System
+      Requires:
+          - libhawaii-devel = %{version}-%{release}
+      Description: |
+        This package contains the files necessary to develop applications |
+        that interact with Hawaii Shell.
+      Files:
+         - "%{_includedir}/hawaii/HawaiiShell/"
+         - "%{_includedir}/hawaii/hawaiishell/"
+         - "%{_libdir}/cmake/HawaiiShell/*.cmake"
+         - "%{_libdir}/libhawaiishell.so"
