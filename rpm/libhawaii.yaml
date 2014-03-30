@@ -22,6 +22,7 @@ PkgConfigBR:
 
 PkgBR:
     - cmake
+    - extra-cmake-modules
     - qt5-default
     - qtconfiguration-devel
 
