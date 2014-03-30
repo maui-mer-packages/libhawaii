@@ -67,6 +67,7 @@ SubPackages:
       Group: Development/System
       Requires:
           - libhawaiishell = %{version}-%{release}
+          - libhawaii-devel = %{version}-%{release}
           - qtconfiguration-devel
       Description: |
         This package contains the files necessary to develop applications |
