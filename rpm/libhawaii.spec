@@ -71,7 +71,7 @@ Library for Hawaii Shell and its applications.
 Summary:    Development files for Hawaii Shell
 Group:      Development/System
 Requires:   %{name} = %{version}-%{release}
-Requires:   libhawaii-devel = %{version}-%{release}
+Requires:   libhawaiishell = %{version}-%{release}
 Requires:   qtconfiguration-devel
 
 %description -n libhawaiishell-devel
