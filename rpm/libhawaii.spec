@@ -146,8 +146,8 @@ rm -rf %{buildroot}
 %files -n libhawaiishell
 %defattr(-,root,root,-)
 %{_libdir}/libhawaiishell.so.*
-# >> files -n libhawaiishell
-# << files -n libhawaiishell
+# >> files libhawaiishell
+# << files libhawaiishell
 
 %files -n libhawaiishell-devel
 %defattr(-,root,root,-)
@@ -155,5 +155,5 @@ rm -rf %{buildroot}
 %{_includedir}/hawaii/hawaiishell/
 %{_libdir}/cmake/HawaiiShell/*.cmake
 %{_libdir}/libhawaiishell.so
-# >> files -n libhawaiishell-devel
-# << files -n libhawaiishell-devel
+# >> files libhawaiishell-devel
+# << files libhawaiishell-devel

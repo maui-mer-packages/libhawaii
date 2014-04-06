@@ -56,13 +56,15 @@ SubPackages:
       Description: This package provides the Hawaii.Shell.Applications plugin.
       Files:
          - "%{_libdir}/hawaii/qml/Hawaii/Shell/Applications/"
-    - Name: -n libhawaiishell
+    - Name: libhawaiishell
+      AsWholeName: true
       Summary: Hawaii Shell library
       Group: System/Libraries
       Description: Library for Hawaii Shell and its applications.
       Files:
          - "%{_libdir}/libhawaiishell.so.*"
-    - Name: -n libhawaiishell-devel
+    - Name: libhawaiishell-devel
+      AsWholeName: true
       Summary: Development files for Hawaii Shell
       Group: Development/System
       Requires:
