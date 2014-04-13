@@ -24,7 +24,6 @@ PkgBR:
     - cmake
     - extra-cmake-modules
     - qt5-default
-    - qtconfiguration-devel
 
 Files:
     - "%doc AUTHORS COPYING COPYING.LIB README.md"
@@ -70,7 +69,6 @@ SubPackages:
       Requires:
           - libhawaiishell = %{version}-%{release}
           - libhawaii-devel = %{version}-%{release}
-          - qtconfiguration-devel
       Description: |
         This package contains the files necessary to develop applications |
         that interact with Hawaii Shell.

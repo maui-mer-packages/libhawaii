@@ -25,7 +25,6 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-default
-BuildRequires:  qtconfiguration-devel
 
 %description
 Provides libraries for the Hawaii desktop environment.
@@ -73,7 +72,6 @@ Group:      Development/System
 Requires:   %{name} = %{version}-%{release}
 Requires:   libhawaiishell = %{version}-%{release}
 Requires:   libhawaii-devel = %{version}-%{release}
-Requires:   qtconfiguration-devel
 
 %description -n libhawaiishell-devel
 This package contains the files necessary to develop applications |
